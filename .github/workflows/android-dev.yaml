@@ -22,6 +22,8 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      - name: Setup HOME CONTROLLER File
+        run: echo "HOME_CONTROLLER_FILE=lib/controllers/home_controller.dart" >> $GITHUB_ENV     
 
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
@@ -33,4 +35,4 @@ jobs:
         run: flutter pub get
 
       - name: Build APK
-        run: flutter build apk --release --build-name=1.0.0 --build-number=1
+        run: flutter build apk --debug --build-name=1.0.0 --build-number=1
