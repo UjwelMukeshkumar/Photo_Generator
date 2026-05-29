@@ -4,13 +4,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class Homescreen extends StatelessWidget {
-  const Homescreen({Key? key});
+  const Homescreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     final homeProvider = Provider.of<HomeProvider>(context);
     return Scaffold(
-      backgroundColor: Color(0xff212121),
+      backgroundColor: const  Color(0xff212121),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -19,7 +19,7 @@ class Homescreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(height: 30),
+             const   SizedBox(height: 30),
                 Text(
                   "Intuitive Ai",
                   style: TextStyle(
@@ -29,7 +29,7 @@ class Homescreen extends StatelessWidget {
                     fontFamily: GoogleFonts.openSans().fontFamily,
                   ),
                 ),
-                SizedBox(height: 30),
+            const    SizedBox(height: 30),
                 Container(
                   height: 320,
                   width: 320,
@@ -43,7 +43,7 @@ class Homescreen extends StatelessWidget {
                             .searchChanging
                         ? provider.imageData != null
                             ? Image.memory(provider.imageData!)
-                            : Center(child: CircularProgressIndicator())
+                            : const  Center(child: CircularProgressIndicator())
                         : Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -63,12 +63,12 @@ class Homescreen extends StatelessWidget {
                           ),
                   ),
                 ),
-                SizedBox(height: 40),
+               const SizedBox(height: 40),
                 Container(
                   height: 170,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
-                    color: Color(0xff424242),
+                    color:const  Color(0xff424242),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: TextField(
@@ -86,12 +86,12 @@ class Homescreen extends StatelessWidget {
                         fontSize: 15,
                         fontFamily: GoogleFonts.openSans().fontFamily,
                       ),
-                      contentPadding: EdgeInsets.all(8.0),
+                      contentPadding: const EdgeInsets.all(8.0),
                       border: InputBorder.none,
                     ),
                   ),
                 ),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -129,7 +129,7 @@ class Homescreen extends StatelessWidget {
                                           GoogleFonts.openSans().fontFamily,
                                     ),
                                   )
-                                : CircularProgressIndicator(
+                                : const CircularProgressIndicator(
                                     color: Colors.white,
                                   );
                           },
